@@ -20,6 +20,7 @@ public class HomeController {
         return "index";
     }
 
+
     @GetMapping("/setup")
     public String setup(Map<String, Object> model) {
         moviesBean.addMovie(new Movie("Wedding Crashers", "David Dobkin", "Comedy", 7, 2005));
