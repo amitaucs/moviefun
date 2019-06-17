@@ -1,6 +1,7 @@
 package org.superbiz.moviefun;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Map;
@@ -19,6 +20,7 @@ public class HomeController {
         return "index";
     }
 
+    @Transactional
     @GetMapping("/setup")
     public String setup(Map<String, Object> model) {
         moviesBean.addMovie(new Movie("Wedding Crashers", "David Dobkin", "Comedy", 7, 2005));
